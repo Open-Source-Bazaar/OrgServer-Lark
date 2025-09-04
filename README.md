@@ -1,8 +1,8 @@
-# Lark-Next-Bootstrap-ts
+# orgserver-lark
 
 [Lark][0] project scaffold based on [TypeScript][2], [React][1], [Next.js][3], [Bootstrap][4] & [Workbox][5]. And this project bootstrapped with [`create-next-app`][6].
 
-[![CI & CD](https://github.com/idea2app/Lark-Next-Bootstrap-ts/actions/workflows/main.yml/badge.svg)][7]
+[![CI & CD](https://github.com/open-source-bazaar/orgserver-lark/actions/workflows/main.yml/badge.svg)][7]
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)][8]
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][9]
@@ -32,7 +32,7 @@
 ## User cases
 
 1. https://github.com/kaiyuanshe/kaiyuanshe.github.io
-2. https://github.com/idea2app/idea2app.github.io
+2. https://github.com/open-source-bazaar/open-source-bazaar.github.io
 3. https://github.com/Open-Source-Bazaar/Open-Source-Bazaar.github.io
 
 ## Best practice
@@ -109,7 +109,7 @@ pnpm container
 
 ### CDN
 
-1. create & configure your own `CACHE_REPOSITORY` with https://github.com/idea2app/Web-file-cache
+1. create & configure your own `CACHE_REPOSITORY` with https://github.com/open-source-bazaar/Web-file-cache
 2. set the `NEXT_PUBLIC_CACHE_HOST` environment variable to your CDN URL
 3. start your Lark-Next.js service, then copy the Crawler JWT from CLI console
 4. create an Automation Flow in your Lark BI Table to watch Attachment fields changing, then send an HTTP `POST` request to `https://your.next.js/api/file/crawler/task` with the Crawler JWT in the `Authorization` header
@@ -122,9 +122,9 @@ pnpm container
 [4]: https://getbootstrap.com/
 [5]: https://developers.google.com/web/tools/workbox
 [6]: https://github.com/vercel/next.js/tree/canary/packages/create-next-app
-[7]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/actions/workflows/main.yml
-[8]: https://codespaces.new/idea2app/Lark-Next-Bootstrap-ts
-[9]: https://gitpod.io/?autostart=true#https://github.com/idea2app/Lark-Next-Bootstrap-ts
+[7]: https://github.com/open-source-bazaar/orgserver-lark/actions/workflows/main.yml
+[8]: https://codespaces.new/open-source-bazaar/orgserver-lark
+[9]: https://gitpod.io/?autostart=true#https://github.com/open-source-bazaar/orgserver-lark
 [10]: https://mdxjs.com/
 [11]: https://mobx.js.org/
 [12]: https://koajs.com/
@@ -134,12 +134,12 @@ pnpm container
 [16]: https://github.com/apps/settings
 [17]: https://pullrequestbadge.com/
 [18]: https://code.visualstudio.com/
-[19]: https://github.com/new?template_name=Lark-Next-Bootstrap-ts&template_owner=idea2app
-[20]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/blob/afa51fad3b16e598bf3b10010b2dc47405b016a3/.github/workflows/main.yml#L9-L11
-[21]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/blob/363e023e5dd472c8ea53ec96eac25ec5122e667b/.github/workflows/Lark-notification.yml#L39
-[22]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/settings/secrets/actions
-[23]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/issues/new/choose
-[24]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/projects
+[19]: https://github.com/new?template_name=orgserver-lark&template_owner=open-source-bazaar
+[20]: https://github.com/open-source-bazaar/orgserver-lark/blob/afa51fad3b16e598bf3b10010b2dc47405b016a3/.github/workflows/main.yml#L9-L11
+[21]: https://github.com/open-source-bazaar/orgserver-lark/blob/363e023e5dd472c8ea53ec96eac25ec5122e667b/.github/workflows/Lark-notification.yml#L39
+[22]: https://github.com/open-source-bazaar/orgserver-lark/settings/secrets/actions
+[23]: https://github.com/open-source-bazaar/orgserver-lark/issues/new/choose
+[24]: https://github.com/open-source-bazaar/orgserver-lark/projects
 [25]: https://nextjs.org/docs/api-routes/introduction
 [26]: https://nextjs.org/docs
 [27]: https://nextjs.org/learn
@@ -148,5 +148,5 @@ pnpm container
 [30]: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#use-environment-variables
 [31]: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#create-initialization-config-files
 [32]: https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide#1f8b587c
-[33]: https://github.com/idea2app/Web-file-cache?tab=readme-ov-file
+[33]: https://github.com/open-source-bazaar/Web-file-cache?tab=readme-ov-file
 [34]: https://nextjs.org/docs/deployment
