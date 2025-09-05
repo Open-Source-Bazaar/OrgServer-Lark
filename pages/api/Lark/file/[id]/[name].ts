@@ -4,7 +4,7 @@ import MIME from 'mime';
 import { createKoaRouter, withKoaRouter } from 'next-ssr-middleware';
 import { Readable } from 'stream';
 
-import { CACHE_HOST } from '../../../../../models/configuration';
+import { CACHE_HOST } from '../../../../../utility/configuration';
 import { safeAPI } from '../../../core';
 import { lark } from '../../core';
 
@@ -22,10 +22,9 @@ const downloader: Middleware = async context => {
 
   const token = await lark.getAccessToken();
 
-  const response = await fetch(
-    lark.client.baseURI + `drive/v1/medias/${id}/download`,
-    { headers: { Authorization: `Bearer ${token}` } },
-  );
+  const response = await fetch(lark.client.baseURI + `drive/v1/medias/${id}/download`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
   const { ok, status, headers, body } = response;
 
   if (!ok) {
@@ -50,8 +49,6 @@ const downloader: Middleware = async context => {
     context.body = Readable.fromWeb(stream2);
 };
 
-router
-  .head('/:id/:name', safeAPI, downloader)
-  .get('/:id/:name', safeAPI, downloader);
+router.head('/:id/:name', safeAPI, downloader).get('/:id/:name', safeAPI, downloader);
 
 export default withKoaRouter(router);

@@ -9,7 +9,7 @@ import { KoaOption, withKoa } from 'next-ssr-middleware';
 import { ProxyAgent, setGlobalDispatcher } from 'undici';
 import { parse } from 'yaml';
 
-import { CrawlerEmail, JWT_SECRET } from '../../models/configuration';
+import { CrawlerEmail, JWT_SECRET } from '../../utility/configuration';
 
 const { HTTP_PROXY } = process.env;
 
@@ -25,8 +25,7 @@ export const parseJWT = JWT({
   passthrough: true,
 });
 
-if (JWT_SECRET)
-  console.info('🔑 [Crawler JWT]', sign({ email: CrawlerEmail }, JWT_SECRET));
+if (JWT_SECRET) console.info('🔑 [Crawler JWT]', sign({ email: CrawlerEmail }, JWT_SECRET));
 
 export const safeAPI: Middleware<any, any> = async (context: Context, next) => {
   try {
@@ -89,10 +88,7 @@ export function splitFrontMatter(raw: string) {
   }
 }
 
-export async function* pageListOf(
-  path: string,
-  prefix = 'pages',
-): AsyncGenerator<ArticleMeta> {
+export async function* pageListOf(path: string, prefix = 'pages'): AsyncGenerator<ArticleMeta> {
   const { readdir, readFile } = await import('fs/promises');
 
   const list = await readdir(prefix + path, { withFileTypes: true });
