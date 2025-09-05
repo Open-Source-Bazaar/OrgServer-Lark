@@ -1,14 +1,9 @@
 import { Context, Middleware } from 'koa';
 import { marked } from 'marked';
-import {
-  LarkApp,
-  LarkData,
-  normalizeTextArray,
-  TableCellText,
-} from 'mobx-lark';
+import { LarkApp, LarkData, normalizeTextArray, TableCellText } from 'mobx-lark';
 import { oauth2Signer } from 'next-ssr-middleware';
 
-import { LarkAppMeta } from '../../../models/configuration';
+import { LarkAppMeta } from '../../../utility/configuration';
 
 export const lark = new LarkApp(LarkAppMeta);
 
